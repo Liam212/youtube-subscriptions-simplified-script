@@ -49,7 +49,7 @@
         // Dissmissable sections contain suggested shorts, news and other distractions
         hideDismissableSections();
 
-        setElementStyle(document.querySelector('page-manager'), { margin: 0 });
+        setElementStyle(getElement('page-manager'), { marginLeft: 0 });
         setElementStyle(document.querySelector('#container.ytd-masthead'), { justifyContent: 'center' });
         setElementStyle(document.querySelector('#buttons.ytd-masthead'), { display: 'none' });
     });

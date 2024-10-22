@@ -35,8 +35,11 @@
     function hideDismissableSections() {
         const sectionRenderers = document.querySelectorAll('ytd-rich-section-renderer');
         sectionRenderers.forEach(section => {
-            if (section.hasAttribute('modern-vwt-style-v2')) {
-                section.style.display = 'none';
+            const firstChild = section.firstElementChild;
+            if (firstChild) {
+                if (firstChild.classList.contains('ytd-rich-section-renderer')) {
+                    section.style.display = 'none';
+                }
             }
         });
     }
